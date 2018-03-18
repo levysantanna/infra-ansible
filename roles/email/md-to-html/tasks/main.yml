@@ -1,0 +1,11 @@
+---
+
+# create email
+- import_tasks: "prereq.yml"
+# create markdown email
+- import_tasks: "template.yml"
+
+- name: Send email
+  import_role:
+    name:  email/send
+# cleanup is done by handlers
